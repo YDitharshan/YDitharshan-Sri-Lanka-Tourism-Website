@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tourist Information about SriLanka</title>
+
+    <!--Font Link-->
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!--Cuatom CSS File Link-->
+    
+    <link rel="stylesheet" href="WebsiteCSS.css">
+</head>
+<body>
+    
+    <!--Header Section Starts-->
+<header>
+
+    <div id="menu-bar" class="fas fa-bars"></div>
+
+    <a href="#" class="logo"><span>SRI</span> LANKA</a>
+
+    <nav class="navbar">
+        <a href = "1home.html">Home</a>
+        <a href = "places.html">Places</a>
+        <a href = "services.html">Services</a>
+        <a href = "gallery.html">Gallery</a>
+        <a href = "maps.html">Maps</a>
+        <a href = "review.html">Review</a>
+        <a href = "contact.html">Contact</a>
+        <a href = "vue js.html">Todo List</a>
+        <a href = "about us.html">About Us</a>
+    </nav>
+
+    <div class="icons">
+        <i class="fa fa-search" id="search-btn"></i>
+        <i class="fa fa-user" id="user-btn"></i>
+    </div>
+
+    <form action="" class="search-bar-container">
+        <input type="search" id="search-bar" placeholder="search here...">
+        <label for="search-bar"  class="fa fa-search"></label>
+    </form>
+</header>
+<!--Header Section Ends-->
+
+
+
+<!--Ligin Form Container-->
+
+<div class="login-form-container">
+
+    <i class="fas fa-times" id="form-close"></i>
+
+        <form action="">
+            <h3>login</h3>
+            <input type="email" class="box" placeholder="enter your email">
+            <input type="password" class="box" placeholder="enter your password">
+            <input type="submit" value="login now" class="btn">
+            <input type="checkbox" id="remember">
+            <label for="remember">remember me</label>
+            <p>forget password? <a href="#">click here</a></p>
+            <p> I don't have a account? <a href="#">register now</a></p>
+        </form>
+</div>
+
+
+<!--home selection start-->
+<section class="home" id="home">
+
+    <div class="content">
+            <h3>Pearl of the Indian Ocean</h3>
+            <p>It's Traval Time</p>
+            <a href="#" class="btn">discover more</a>
+    </div>
+
+    <div class="control">
+        <span class="vid-btn active" data-src="videos/intro1.mp4"></span>
+        <span class="vid-btn" data-src="videos/intro2.mp4"></span>
+        <span class="vid-btn" data-src="videos/intro3.mp4"></span>
+        <span class="vid-btn" data-src="videos/intro4.mp4"></span>
+        <span class="vid-btn" data-src="videos/intro5.mp4"></span>
+    </div>
+
+    <div class="video-container">
+        <video src="videos/intro1.mp4" id="video-slider" loop autoplay muted></video>
+    </div>
+
+</section>
+<!--home selection ends-->
+
+
+<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+
+
+
+    <!--Cuatom JavaScript File Link-->
+<script src="website.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tourist Information about SriLanka</title>
+
+    <!--Font Link-->
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+        <!--Vue Js Font Link-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css">
+
+    <!--Cuatom CSS File Link-->
+    
+    <link rel="stylesheet" href="WebsiteCSS.css">
+</head>
+
+<body>
+
+        <!--Header Section Starts-->
+        <header>
+
+            <div id="menu-bar" class="fas fa-bars"></div>
+        
+            <a href="#" class="logo"><span>Sri</span> Lanka</a>
+        
+            <nav class="navbar">
+                <a href = "1home.html">Home</a>
+                <a href = "places.html">Places</a>
+                <a href = "services.html">Services</a>
+                <a href = "gallery.html">Gallery</a>
+                <a href = "maps.html">Maps</a>
+                <a href = "review.html">Review</a>
+                <a href = "contact.html">Contact</a>
+                <a href = "vue js.html">Todo List</a>
+                <a href = "about us.html">About Us</a>
+            </nav>
+        
+            <div class="icons">
+                <i class="fa fa-search" id="search-btn"></i>
+                <i class="fa fa-user" id="user-btn"></i>
+            </div>
+        
+            <form action="" class="search-bar-container">
+                <input type="search" id="search-bar" placeholder="search here...">
+                <label for="search-bar"  class="fa fa-search"></label>
+            </form>
+        </header>
+        <!--Header Section Ends-->
+    
+<section>
+
+<div id="app">
+    <div class="container">
+
+        <h1>Your Review about this page</h1>
+
+        <div v-if="!isEditing">
+
+        <input type="text" v-model="todo">
+
+        <input type="submit" value="add" @click="storeTodo">
+
+    </div>
+
+    <div v-else>
+
+        <input type="text" v-model="todo">
+
+        <input type="submit" value="update" @click="updateTodo">
+
+
+    </div>
+
+        <ol>
+            <li v-for="(todo, index) in todos">
+
+                    {{todo}}
+
+                <button @click="editTodo(index, todo)">Edit</button>
+                <button @click="deleteTodo(index)">Delete</button>
+
+            </li>
+        </ol>
+
+    </div>
+
+</div>
+
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+
+    <script>
+        new Vue({
+            el: '#app',
+
+            data: {
+
+                isEditing: false,
+
+                selectedIndex: null,
+
+                todo: '',
+
+                todos: ['Its been a grat experience all around this page, Thank You so much - Mr. Mark Sugerbag', 
+                'Super Website for Travaling - Mr. Bill Gates',
+                'The best website for Sri Lankan travalling informations - Mrs. angelina Jolie']
+            },
+
+
+            methods: {
+                storeTodo() {
+                    this.todos.push(this.todo)
+
+                    this.todo = ''
+                },
+
+            editTodo(index, todo) {
+                this.todo = todo
+                this.selectedIndex = index
+                this.isEditing = true
+            },
+
+
+            updateTodo() {
+                this.todos.splice(this.selectedIndex, 1, this.todo)
+                this.isEditing = false
+            },
+
+            deleteTodo(index) {
+                this.todos.splice(index, 1)
+            }
+
+            }
+        })
+    </script>
+
+</section>
+
+
+<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+
+
+    <!--Cuatom JavaScript File Link-->
+    <script src="website.js"></script>
+
+</body>
+</html>
+</body>
+</html>
